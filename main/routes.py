@@ -1,6 +1,6 @@
 from main import app
 from flask import render_template, request
-from main.models import Contact
+from main.models import Contact,Login
 from main import db
 
 @app.route("/")
@@ -8,8 +8,17 @@ from main import db
 def home():
     return render_template('index.html')
 
-@app.route("/login")
+@app.route("/login", methods=['GET', 'POST'])
 def login():
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['msg']
+        if password == '' or email == '':
+            return render_template('contact.html', message='Please enter required field')
+        data = Contact(email,password)
+        db.session.add(data)
+        db.session.commit()
+        return render_template('index.html', message='Login successfully')
     return render_template('login.html')
 
 @app.route("/register", methods=['GET'])
