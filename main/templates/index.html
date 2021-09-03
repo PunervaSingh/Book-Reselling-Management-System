@@ -1,135 +1,401 @@
 {% extends "base.html" %}
 
+{% block head %}
+<title>HOME PAGE</title>
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
+
 {% block content %}
-<!-- <h1>HOME PAGE</h1> -->
-<div class="home-heading">
-    <h3 style="font-size: 50px;margin-bottom: 30px;">BOOK RESELLING MANAGEMENT SYSTEM</h3>
-    <h1 style="margin-bottom: 50px;">Manage books <br> With your finger tip.</h1> 
-    <h5 style="margin-bottom: 50px;">
-        E-commerce in India has changed the buying habits of customers. 15 years ago, we used to regularly visit book shops and spend hours finding what we need. With online selling, buying books has become so easy that books are now one of the top selling categories in e-commerce.
-    </h5> 
-    <div class="container">
-        <div class="row">
-            <a class="nav-link nav-link-login" style="color: white;margin-left: 220px;width: 300px;border: 2px solid white;" href="{{ url_for('login') }}">Login to your portal</a></li>
-            <a class="nav-link nav-link-register" style="color: white;margin-left: 20px;width: 300px;border: 2px solid white;" href="{{ url_for('login') }}">Helpguide to BRMS</a></li>
+<div class="container-fluid container-1">
+    <h4 class="main-heading">Online Book Reselling Management System</h4>
+    <div class="home-con">
+        <h1 class="tag-line">Manage books <br> With your finger tip.</h1> 
+        <h5 class="about-site">
+            E-commerce in India has changed the buying habits of customers. 15 years ago, we used to regularly visit book shops and spend hours finding what we need. With online selling, buying books has become so easy that books are now one of the top selling categories in e-commerce.
+        </h5> 
+        <div class="container">
+            <div class="row">
+                <a class="nav-link nav-link-login" href="{{ url_for('login') }}">Login to your portal</a></li>
+                <a class="nav-link nav-link-register" href="{{ url_for('login') }}">Helpguide to BRMS</a></li>
+            </div>
         </div>
     </div>
-</div>
-<!-- <div class="bg-video-wrap">
-    <video src="../static/video/My Movie.mp4" loop muted autoplay>
-    </video>
-    <div class="overlay"></div>
-  </div> -->
 <div class="header">
     <img 
         class="headerImg"
-        src="https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        src="https://images.pexels.com/photos/5026973/pexels-photo-5026973.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
         alt=""
-        style="height: 100vh; width: 100vw;"
     >
-    <div class="overlay"></div>
   </div>
 </div>
-<div class="container-fluid" style="display: flex; max-width: 100%; flex-wrap: wrap;">
-    <div class="media content-section" style="display: flex; flex-direction: column; margin: 50px; max-width: 300px;padding: 10px;box-shadow: 5px 5px 10px #504e4e; ">
-        <img class="article-img" src="{{ url_for('static', filename='img/book1.jpg') }}" style="height: 300px; width: 200px;">
-        <div class="media-body">
-        <div class="article-metadata">
-            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
-            <small class="text-muted">BOOK AUTHOR</small>
+
+<div class="container-fluid" >
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div> 
+                <img src="../static/img/read-book.jpg" class="home-image" alt="">  
+            </div>   
         </div>
-        <p class="article-content">BOOK PRICE</p>
-        </div>
-    </div>
-    <div class="media content-section" style="display: flex; flex-direction: column; margin: 50px; max-width: 300px;padding: 10px;box-shadow: 5px 5px 10px #504e4e;">
-        <img class="article-img" src="{{ url_for('static', filename='img/book2.jpeg') }}" style="height: 300px; width: 200px;">
-        <div class="media-body">
-        <div class="article-metadata">
-            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
-            <small class="text-muted">BOOK AUTHOR</small>
-        </div>
-        <p class="article-content">BOOK PRICE</p>
-        </div>
-    </div>
-    <div class="media content-section" style="display: flex; flex-direction: column; margin: 50px; max-width: 300px;padding: 10px;box-shadow: 5px 5px 10px #504e4e;">
-        <img class="article-img" src="{{ url_for('static', filename='img/book3.jpeg') }}" style="height: 300px; width: 200px;">
-        <div class="media-body">
-        <div class="article-metadata">
-            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
-            <small class="text-muted">BOOK AUTHOR</small>
-        </div>
-        <p class="article-content">BOOK PRICE</p>
-        </div>
-    </div>
-    <div class="media content-section" style="display: flex; flex-direction: column; margin: 50px; max-width: 300px;padding: 10px;box-shadow: 5px 5px 10px #504e4e;">
-        <img class="article-img" src="{{ url_for('static', filename='img/book4.jpeg') }}" style="height: 300px; width: 200px;">
-        <div class="media-body">
-        <div class="article-metadata">
-            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
-            <small class="text-muted">BOOK AUTHOR</small>
-        </div>
-        <p class="article-content">BOOK PRICE</p>
-        </div>
-    </div>
-    <div class="media content-section" style="display: flex; flex-direction: column; margin: 50px; max-width: 300px;padding: 10px;box-shadow: 5px 5px 10px #504e4e;">
-        <img class="article-img" src="{{ url_for('static', filename='img/book5.jpeg') }}" style="height: 300px; width: 200px;">
-        <div class="media-body">
-        <div class="article-metadata">
-            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
-            <small class="text-muted">BOOK AUTHOR</small>
-        </div>
-        <p class="article-content">BOOK PRICE</p>
-        </div>
-    </div>
-    <div class="media content-section" style="display: flex; flex-direction: column; margin: 50px; max-width: 300px;padding: 10px;box-shadow: 5px 5px 10px #504e4e; ">
-        <img class="article-img" src="{{ url_for('static', filename='img/book1.jpg') }}" style="height: 300px; width: 200px;">
-        <div class="media-body">
-        <div class="article-metadata">
-            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
-            <small class="text-muted">BOOK AUTHOR</small>
-        </div>
-        <p class="article-content">BOOK PRICE</p>
-        </div>
-    </div>
-    <div class="media content-section" style="display: flex; flex-direction: column; margin: 50px; max-width: 300px;padding: 10px;box-shadow: 5px 5px 10px #504e4e;">
-        <img class="article-img" src="{{ url_for('static', filename='img/book2.jpeg') }}" style="height: 300px; width: 200px;">
-        <div class="media-body">
-        <div class="article-metadata">
-            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
-            <small class="text-muted">BOOK AUTHOR</small>
-        </div>
-        <p class="article-content">BOOK PRICE</p>
-        </div>
-    </div>
-    <div class="media content-section" style="display: flex; flex-direction: column; margin: 50px; max-width: 300px;padding: 10px;box-shadow: 5px 5px 10px #504e4e;">
-        <img class="article-img" src="{{ url_for('static', filename='img/book3.jpeg') }}" style="height: 300px; width: 200px;">
-        <div class="media-body">
-        <div class="article-metadata">
-            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
-            <small class="text-muted">BOOK AUTHOR</small>
-        </div>
-        <p class="article-content">BOOK PRICE</p>
-        </div>
-    </div>
-    <div class="media content-section" style="display: flex; flex-direction: column; margin: 50px; max-width: 300px;padding: 10px;box-shadow: 5px 5px 10px #504e4e;">
-        <img class="article-img" src="{{ url_for('static', filename='img/book4.jpeg') }}" style="height: 300px; width: 200px;">
-        <div class="media-body">
-        <div class="article-metadata">
-            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
-            <small class="text-muted">BOOK AUTHOR</small>
-        </div>
-        <p class="article-content">BOOK PRICE</p>
-        </div>
-    </div>
-    <div class="media content-section" style="display: flex; flex-direction: column; margin: 50px; max-width: 300px;padding: 10px;box-shadow: 5px 5px 10px #504e4e;">
-        <img class="article-img" src="{{ url_for('static', filename='img/book5.jpeg') }}" style="height: 300px; width: 200px;">
-        <div class="media-body">
-        <div class="article-metadata">
-            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
-            <small class="text-muted">BOOK AUTHOR</small>
-        </div>
-        <p class="article-content">BOOK PRICE</p>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="grid_1-2 grid_1-sm" style="width: 90%;"> 
+                <div class="sub-con">
+                    <p class="heading-s">Advantage - 1</p>
+                    <p class="body-m">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="sub-con">
+                    <p class="heading-s">Advantage - 2</p>
+                    <p class="body-m">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="sub-con">
+                    <p class="heading-s">Advantage - 3</p>
+                    <p class="body-m">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div class="sub-con">
+                    <p class="heading-s">Advantage - 4</p>
+                    <p class="body-m">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="container-fluid slider-container">
+    <h1 class="slider-heading">Top 3 Most Sold Books</h1>
+    <div class="container slider-inner-div">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+    <div class="carousel-inner" style="height: 100%;">
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="grid_1-2 grid_1-sm"> 
+                        <h4>BOOK TITLE</h4> 
+                        <h2>Book Author</h2> 
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                        </p> 
+                    </div> 
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="image-div"> 
+                        <img src="../static/img/book1.jpg" class="article-img" alt=""> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="grid_1-2 grid_1-sm"> 
+                        <h4>BOOK TITLE</h4>  
+                        <h2>Book Author</h2> 
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                        </p> 
+                    </div> 
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="image-div"> 
+                        <img src="../static/img/book2.jpeg" class="article-img" alt=""> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="grid_1-2 grid_1-sm"> 
+                        <h4>BOOK TITLE</h4> 
+                        <h2>Book Author</h2>  
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.                        </p> 
+                    </div> 
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="image-div"> 
+                        <img src="../static/img/book3.jpeg" class="article-img" alt=""> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+    
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ul>
+</div>
+</div>
+</div>
+<div>
+    <div class="row">
+        <div class="col-2 sidebar">
+
+            <div class="sidebar-item">
+              <div class="make-me-sticky">
+                  <h1 class="sidebar-heading">Genres: </h1>
+                    <ul class="nav_list">
+                  
+                      <li class="list-item list-test" data-tooltip="Codepen">
+                        <a href="#" class="genre-element">
+                            <i class="fas fa-archive fa-2x"></i>
+                            <span class="text">Genre-1</span>
+                        </a>
+                      </li>
+                  
+                      <li class="list-item" data-tooltip="Opera">
+                        <a href="#" class="genre-element">
+                            <i class="fas fa-archive fa-2x"></i>
+                          <span class="text">Genre-2</span>
+                        </a>
+                      </li>
+                  
+                      <li class="list-item" data-tooltip="Firefox">
+                        <a href="#" class="genre-element">
+                            <i class="fas fa-archive fa-2x"></i>
+                          <span class="text">Genre-3</span>
+                        </a>
+                      </li>
+                      <li class="list-item" data-tooltip="Linux">
+                        <a href="#" class="genre-element">
+                            <i class="fas fa-archive fa-2x"></i>
+                          <span class="text">Genre-4</span>
+                        </a>
+                      </li>
+                      <li class="list-item" data-tooltip="Facebook">
+                        <a href="#" class="genre-element">
+                            <i class="fas fa-archive fa-2x"></i>
+                          <span class="text">Genre-5</span>
+                        </a>
+                      </li>
+                      <li class="list-item" data-tooltip="CSS3">
+                        <a href="#" class="genre-element">
+                            <i class="fas fa-archive fa-2x"></i>
+                          <span class="text">Genre-6</span>
+                        </a>
+                      </li>
+                      <li class="list-item" data-tooltip="Python">
+                        <a href="#" class="genre-element">
+                            <i class="fas fa-archive fa-2x"></i>
+                          <span class="text">Genre-7</span>
+                        </a>
+                      </li>
+                      <li class="list-item" data-tooltip="Settings">
+                        <a href="#" class="genre-element">
+                            <i class="fas fa-archive fa-2x"></i>
+                          <span class="text">Genre-8</span>
+                        </a>
+                      </li>
+                    </ul>
+              </div>
+            </div>
+        
+  
+          </div>
+        <div class="col-10">
+            <div class="content-section-div" style="margin-top: 50px;">
+                <h1 style="text-align: center;">Available Books</h1>
+                <div class="container-fluid" style="display: flex; max-width: 100%; flex-wrap: wrap; padding-top: 30px;">
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book1.jpg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book2.jpeg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book3.jpeg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book4.jpeg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book5.jpeg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book1.jpg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book2.jpeg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book3.jpeg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book4.jpeg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book5.jpeg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book1.jpg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                    <div class="media content-section">
+                        <img class="article-img book-img" src="{{ url_for('static', filename='img/book2.jpeg') }}">
+                        <div class="media-body">
+                        <div class="article-metadata">
+                            <h3><a class="mr-2" href="{{ url_for('singlepost') }}">BOOK TITLE</a></br></h3>
+                            <small class="text-muted">BOOK AUTHOR</small>
+                        </div>
+                        <p class="article-content">BOOK PRICE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="container-fluid" style="background-color: rgb(133 79 65);padding: 30px 0;">
+    <footer class="site-footer container-fluid" style="padding: 0;"> 
+        <div class="wrap-size-lg container-fluid" style="padding: 35px;"> 
+            <h3 style="color: white; margin-bottom: 15px;">About HONYA</h3> 
+            <div class="row grid-spacing-sm"> 
+                <div class="footer-div col-lg-3 col-md-2 col-sm-6"> 
+                    <ul class="footer-nav"> 
+                        <li> 
+                            <a class="footer-link" href="#">Email: honya@gmail.com </a> 
+                        </li> 
+                        <li> 
+                            <a class="footer-link" href="#">Address: IGDTUW, Kashmere Gate, Delhi </a> 
+                        </li> 
+                    </ul> 
+                </div> 
+                <div class="footer-div col-lg-2 col-md-2 col-sm-6"> 
+                    <ul class="footer-nav"> 
+                        <li> 
+                            <a class="footer-link" href="#"> Github Repository </a> 
+                        </li> 
+                        <li> 
+                            <a class="footer-link" rel="nofollow noreferrer" target="_blank" href="{{url_for('login')}}"> Guide to Honya </a> 
+                        </li> 
+                    </ul> 
+                </div> 
+                <div class="footer-div col-lg-2 col-md-2 col-sm-6"> 
+                    <ul class="footer-nav"> 
+                        <li> 
+                            <a class="footer-link" href="{{url_for('login')}}"> FAQ's </a> 
+                        </li> 
+                        <li> 
+                            <a class="footer-link" href="{{url_for('login')}}"> Terms of Service </a> 
+                        </li> 
+                    </ul> 
+                </div> 
+                <div class="footer-div col-lg-2 col-md-2 col-sm-6"> 
+                    <h5 style="color: white;">Follow Us On:-</h5>
+                    <ul class="footer-nav" style="display: flex;padding-left: 0;"> 
+                        <li> 
+                            <a class="footer-link footer-icon" href="#"><i class="fab fa-facebook-square"></i></a> 
+                        </li> 
+                        <li> 
+                            <a class="footer-link footer-icon" href="#"><i class="fab fa-instagram"></i></a> 
+                        </li> 
+                        <li> 
+                            <a class="footer-link footer-icon" href="#"><i class="fab fa-twitter-square"></i> </a> 
+                        </li> 
+                        <li> 
+                            <a class="footer-link footer-icon" href="#"><i class="fab fa-linkedin"></i></a> 
+                        </li> 
+                    </ul> 
+                </div> 
+            </div> 
+        </div> 
+    </footer>
+</div>
+
 {% endblock %}
