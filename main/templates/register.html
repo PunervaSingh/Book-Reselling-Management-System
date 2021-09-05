@@ -2,4 +2,38 @@
 
 {% block content %}
 <h1>REGISTER PAGE</h1>
+<div class="register">
+    <div class="cc1">
+            <div class="cfc2">
+                <form action="/register" method="POST" style="width: 400px;padding: 50px;">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" placeholder="Enter your name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" placeholder="Enter your email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State:</label>
+                        <input type="text" name="state" placeholder="Enter your state" />
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="text" name="city" placeholder="Enter your city" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">New Password:</label>
+                        <input type="text" name="password" placeholder="Enter new password" />
+                    </div>
+                    <div class="form-group">
+                        <label for="c_password">Confirm Password:</label>
+                        <input type="text" name="c_password" placeholder="Confirm your new password" />
+                    </div>
+                    <center><input type="submit" value="Submit" class="btn btn-primary" method='post'></center>
+                </form>
+            </div>
+        </div>
+    <!-- <div class="cc2"></div> -->
+</div>
 {% endblock %}
